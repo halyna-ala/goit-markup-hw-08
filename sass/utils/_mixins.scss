@@ -1,0 +1,8 @@
+@mixin transition ($type) {
+    transition: $type $animation;
+}
+@mixin vertically-centered {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    }

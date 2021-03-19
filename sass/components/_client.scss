@@ -1,0 +1,41 @@
+.section__client {
+    padding-bottom: 97px;
+    }
+    
+    .client__title {
+        display: flex;
+        justify-content: space-between;
+     
+        padding: 0;
+      
+        margin: 50px auto 0;
+       color: $social-icons;
+    }
+    
+    .client__link {
+        color: $social-icons;
+     }
+
+    .client__wraper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 170px;
+      height: 90px;
+
+      border: 1px solid currentColor;
+      border-radius: 4px;
+
+      @include transition(color);
+      
+      &:hover,
+      &:focus {
+      color: $akcent-color;
+      }
+    }
+    
+    .client__icon {
+        fill: currentColor;
+    }
+    

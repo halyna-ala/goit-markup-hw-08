@@ -1,0 +1,218 @@
+/* backdrop-hero */
+.backdrop__sign {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $backdrop;
+    
+    opacity: 1;
+    @include transition(opacity);
+    
+}
+.backdrop__sign.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: visible;
+}
+
+.backdrop__sign.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+
+/* оформлення модального вікна */
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    transform: translate(-50%, -50%) scale(1);
+
+    min-width: 528px;
+    max-height: 100vh;
+
+    background-color: $hero-100pr;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  
+}
+.modal__icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 5px;
+    
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: inherit;
+  
+  &:focus, 
+  &:hover {
+     fill: $akcent-color;
+  }
+}
+
+.modal__title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: $title-text-color;
+}
+
+.signup-form__group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+.signup-form__lable {
+    display: flex;
+        flex-direction: column;
+
+    margin-bottom: 4px;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    cursor: pointer; 
+}
+
+.signup-form__input {
+    width: 100%;
+    font-family: inherit;
+    margin: 0;
+    padding: 11px 11px 11px 42px;
+    width: 448px;
+    
+    
+    cursor: pointer; 
+
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    @include transition(background-color);
+    
+    &:focus, 
+    &:hover {
+    border-color:  $akcent-color;
+    }
+
+    &:focus + .signup-form__icon, 
+    &:hover + .signup-form__icon {
+        fill: $akcent-color;
+    }
+}
+
+   .input-wrapper {
+       position: relative;
+   }
+
+   .signup-form__icon {
+       @include vertically-centered;
+       left: 12px;
+
+    cursor: pointer; 
+    @include transition(fill);
+}
+
+
+.signup-form--comment {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    
+    &:hover::placeholder,
+    &:focus::placeholder {
+        color: $akcent-color;
+    }
+    }
+
+
+    /* checkbox */
+
+    .checkbox {
+       margin: 0 11px 30px 12px;
+    }
+
+    .checkbox__lable {
+    display: flex;
+
+    align-items: center;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.71;
+    cursor: pointer;
+
+    &:focus .checkbox__link,
+    &:hover .checkbox__link {
+color: $modal-bg-btn;
+}
+}
+
+ .checkbox__link {
+    color: $akcent-color;
+    text-decoration-line: underline;
+    @include transition(color);
+    
+}
+ 
+.checkbox__input {
+   appearance: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+   position: absolute;
+}
+
+.chackbox__icon {
+    margin-right: 7px;
+    border: 2px solid $logo-tekst;
+    border-radius: 3px;
+    fill: none;
+    cursor: pointer;
+    @include transition(background-color);
+}
+
+
+.checkbox__input:checked + .chackbox__icon {
+    border: none;
+    background-color: $akcent-color;
+    fill: $hero-100pr;
+    opacity: 1;
+}
+
+ .checkbox__btn {
+     display: flex;
+
+     min-width: 200px;
+     
+     margin-right: auto;
+     margin-left: auto;
+     padding: 10px 55px;
+     font-family: inherit;
+     font-weight: 700;
+     font-size: 16px;
+     line-height: 1.87;
+     letter-spacing: 0.06em;
+
+     color: $hero-100pr;
+     background-color: $akcent-color;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+     border: transparent;
+     border-radius: 4px;
+     cursor: pointer;
+     @include transition(background-color);
+ }
+
+ .signup-form:focus .checkbox__btn,
+ .signup-form:hover .checkbox__btn {
+     background-color: $modal-bg-btn; 
+    }

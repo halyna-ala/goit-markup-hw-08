@@ -1,0 +1,47 @@
+.hero {
+    max-width: 1600px;
+    margin-right:auto;
+    margin-left: auto;
+    padding-top: 199px;
+    padding-bottom: 201px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 600px;
+    text-align: center;
+    background-image: linear-gradient(to right,
+    $bg-hero-color, $bg-hero-color
+),
+url(../images/hero.jpg);
+background-size: cover;
+background-position: center;
+text-align: center; 
+}
+
+.hero__title {
+    margin-bottom: 40px;
+    margin-right:auto;
+    margin-left: auto;
+    color: $hero-100pr; 
+    font-weight: 900; 
+    font-size: 44px; 
+    line-height: 1.36; 
+    width: 696px;
+    letter-spacing: 0.06em;
+}
+
+.hero__button {
+border-radius: 4px;
+padding: 10px 32px;
+border: 1px solid transparent;
+
+color: $hero-100pr; 
+background-color: $akcent-color; 
+
+font-family: inherit; 
+font-weight: 700; 
+font-size: 16px; 
+line-height: 1.87; 
+letter-spacing: 0.06em;
+align-items: center;
+cursor: pointer;
+}
