@@ -1,0 +1,33 @@
+.header {
+    border-bottom: 1px solid rgba(236, 236, 236, 1);
+   
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.nav__site {
+    display: none;
+}
+
+.contacts { 
+    display: none;
+}
+
+.header__menu {
+  
+    border: transparent;
+    background-color: $hero-100pr;
+}
+
+.header__menu--icon {
+    @include transition(opacity);
+
+    &:focus,
+    &:hover {
+        fill: $akcent-color;
+    }
+
+}
