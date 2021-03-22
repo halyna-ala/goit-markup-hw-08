@@ -2,11 +2,11 @@
     max-width: 1600px;
     margin-right:auto;
     margin-left: auto;
-    padding-top: 199px;
-    padding-bottom: 201px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     margin-top: 0px;
     margin-bottom: 0px;
-    height: 600px;
+    // height: 600px;
     text-align: center;
     background-image: linear-gradient(to right,
     $bg-hero-color, $bg-hero-color
@@ -18,14 +18,15 @@ text-align: center;
 }
 
 .hero__title {
-    margin-bottom: 40px;
+    margin-top: 0;
     margin-right:auto;
+    margin-bottom: 30px;
     margin-left: auto;
     color: $hero-100pr; 
     font-weight: 900; 
-    font-size: 44px; 
-    line-height: 1.36; 
-    width: 696px;
+     font-size: 26px; 
+    line-height: 1.42; 
+    min-width: 360px;
     letter-spacing: 0.06em;
 }
 
@@ -44,4 +45,5 @@ line-height: 1.87;
 letter-spacing: 0.06em;
 align-items: center;
 cursor: pointer;
+min-width: 200px;
 }

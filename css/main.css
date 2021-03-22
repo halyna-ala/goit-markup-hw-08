@@ -161,16 +161,23 @@ img {
 }
 
 .container {
-  min-width: 200px;
+  max-width: 480px;
+  min-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 768px) {
   .container {
-    width: 480px;
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
   }
 }
 
@@ -227,11 +234,10 @@ img {
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 199px;
-  padding-bottom: 201px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin-top: 0px;
   margin-bottom: 0px;
-  height: 600px;
   text-align: center;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
@@ -241,14 +247,15 @@ img {
 }
 
 .hero__title {
-  margin-bottom: 40px;
+  margin-top: 0;
   margin-right: auto;
+  margin-bottom: 30px;
   margin-left: auto;
   color: #FFFFFF;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  width: 696px;
+  font-size: 26px;
+  line-height: 1.42;
+  min-width: 360px;
   letter-spacing: 0.06em;
 }
 
@@ -267,18 +274,26 @@ img {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  min-width: 200px;
 }
 
 .feature-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+}
+
+@media (min-width: 768px) {
+  .feature-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: calc(-1 * 30px);
+    margin-left: calc(-1 * 30px);
+  }
 }
 
 .feature-list__title {
@@ -289,27 +304,60 @@ img {
   color: #212121;
 }
 
+@media (max-width: 768px) {
+  .feature-list__title {
+    text-align: center;
+  }
+}
+
 .feature-list__text {
   margin-top: 0;
-  margin-bottom: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
 }
 
 .feature-list__items {
-  width: 270px;
+  max-width: 450px;
+}
+
+@media (max-width: 768px) {
+  .feature-list__items:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .feature-list__items {
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .feature-list__items {
+    -ms-flex-preferred-size: calc((100% - 120px) / 4);
+        flex-basis: calc((100% - 120px) / 4);
+  }
 }
 
 .feature-list__items::before {
   display: block;
   content: '';
-  width: 270px;
+  max-width: 450px;
   height: 120px;
   margin-bottom: 30px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #F5F4FA;
+}
+
+@media (min-width: 768px) {
+  .feature-list__items::before {
+    max-width: 354px;
+  }
 }
 
 .feature-list__items:nth-child(1)::before {
@@ -328,12 +376,14 @@ img {
   background-image: url("../images/astronaut.svg");
 }
 
-.feature-list__items + .feature-list__items {
-  margin-left: 30px;
-}
-
 .about-us {
   padding-bottom: 94px;
+}
+
+@media (max-width: 1200px) {
+  .about-us {
+    display: none;
+  }
 }
 
 .about-us__list {
