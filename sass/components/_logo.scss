@@ -10,5 +10,17 @@
     color: $akcent-color;
 }
 
+.logo--top {
+    @media (min-width: 1200px) {
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
+}
 
+.logo--bottom {
+    color: $hero-100pr;
+    // @media (max-width: 767px) {
+    //     text-align: center;
+    // }
+}
 

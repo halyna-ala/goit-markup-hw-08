@@ -1,27 +1,41 @@
 .footer {
-    display: flex;
-    justify-content: center;
     background: $backgraund;
+
+    @media (min-width: 1200px) {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .footer__container {
-    display: flex;
-    align-items: baseline;
     padding-top: 60px;
     padding-bottom: 60px;
-}
 
-.address {
-    display: block;
-    
+    @media (max-width: 767px) {
+        text-align: center;
+    }
+    @media (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+}
+}
+.address {    
     padding-left: 0;
-    margin: 20px 0 0;
-    width: 231px;
+    margin: 20px auto;
+    max-width: 232px;
     
     font-style: normal;
     font-weight: normal; 
     font-size: 14px; 
     line-height: 1.71;
+
+    @media (max-width: 767px) {
+        text-align: center;
+    }
+
+    @media (min-width: 1200px) {
+        display: block;
+    }
 }
  
 .address__item {
@@ -57,22 +71,38 @@
 
     color: $hero-100pr;
 text-transform: uppercase;
+
+@media (max-width: 767px) {
+margin-top: 60px;
+}
 }
 
 .footer-social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 0;
-    padding-bottom: 0;
-    width: 206px;
+    max-width: 206px;
+    height: 80px;
+
+    @media (max-width: 767px) {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    }
+
+    @media (min-width: 1200px) {
+        padding-top: 0;
+        padding-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
   margin: 12px 93px 40px 70px;
 }
-
+}
 
 /* footer e-mail */
 .footer-form {
+    display: block;
+    @media (min-width: 1200px) {
     display: flex;
+}
 }
 
 .form-title {
@@ -88,44 +118,48 @@ text-transform: uppercase;
 
  
 .footer-form__email {
-width: 358px;
-
-outline: none;
-margin: 0;
-padding-top: 15px;
-padding-bottom: 15px;
-padding-left: 16px;
-line-height: 20px;
-
-font-family: inherit;
-border: 1px solid rgba(255, 255, 255, 0.3);
-box-sizing: border-box;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-border-radius: 4px;
-background-color: transparent;
-color: $hero-100pr;
-
-@include transition(border-color);    
-
-&:focus,
-&:hover {
-    border-color: $modal-bg-btn;
-}
+    height: 50px;
+    outline: none;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    line-height: 20px;
+    
+    font-family: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    color: $hero-100pr;
+    
+    @include transition(border-color);    
+    
+    &:focus,
+    &:hover {
+        border-color: $modal-bg-btn;
+    }
+        @media (max-width: 1199px) {
+            margin-right: auto;
+            margin-left: auto;
+            width: 450px;   
+        }
+        @media (min-width: 1200px) {
+            width: 358px;
+            
+        }
 }
  
 // buttom
 
 .footer-form__button {
-    display: flex;
     width: 200px;
     height: 50px;
     position: relative;
-    padding-top: 10px;
-    padding-right: 62px;
-    padding-bottom: 10px;
-    padding-left: 29px;
+    padding: 10px 62px 10px 29px;
+   
     font-family: inherit;
-margin-left: 12px;
 font-weight: 700;
 font-size: 16px;
 line-height: 1.87;
@@ -141,6 +175,17 @@ box-shadow: $shadow-button;
 cursor: pointer;
 
 @include transition(background-color);
+@media (max-width: 1199px) {
+    display: block;
+    margin-top: 20px;
+   margin-right: auto;
+   margin-left: auto;
+}
+
+@media (min-width: 1200px) {
+display: flex;
+margin-left: 12px;
+}
 
 &:focus,
 &:hover {
