@@ -21,33 +21,71 @@
 
     
     .section__team {
+        background-color: $primery-btn-color;
+
+        @media (max-width: 1200px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+        @media (min-width: 1200px) {
         padding-top: 94px;
         padding-bottom: 94px;
-        
-        background-color: $primery-btn-color;
     }
-    
-    .team__list .team__persons {
-        flex-basis: calc(100% / 4 - 30px);
+}
+   .team__persons {
+
+    @media (max-width: 768px) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        flex-basis: calc(100% / 2 - 30px);
+        margin-top: 30px;
         margin-left: 30px;
     }
+    @media (min-width: 1200px) {
+        flex-basis: calc(100% / 4 - 30px);
+    }
+}
     .team__list {
-        margin-left: calc(-1 * 30px);
-        display: flex;
-        flex-wrap: wrap;
-padding-left: 0;
-margin-top: 0;
-margin-bottom: 0;
-text-align: center;
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
 
+        @media (min-width: 768px) {
+            margin-top: calc(-1 * 30px);
+            margin-left: calc(-1 * 30px);
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+    
 }
 
 .team__info {
-padding-top: 30px;
-padding-bottom: 30px;
-background-color: $hero-100pr;
+    padding-top: 30px;
+    padding-bottom: 24px;
 
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 0px 0px 4px 4px;
-cursor: pointer;
+    background-color: $hero-100pr;
+    
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    cursor: pointer;
+
+    @media (min-width: 1200px) {
+padding-bottom: 30px;
+
+}
+}
+
+.team__img {
+    height: 460px;
+    
+    @media (min-width: 768px) {
+    height: 374px;
+    }
 }
