@@ -1,6 +1,7 @@
 .section__client {
     padding-top: 60px;
     padding-bottom: 60px;
+    
     &--title {
         display: flex;
         justify-content: center;
@@ -23,7 +24,8 @@
         flex-wrap: wrap;
      margin-top: -30px;
      margin-left: -30px;
-
+margin-bottom: 0;
+padding-left: 0;
         color: $social-icons;
 }
 .client__item {
@@ -43,8 +45,10 @@ width: calc(100% / 3 - 30px);
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-right: 0;
+        margin-left: 0;
         
-        width: 210px;
+        max-width: 210px;
         height: 90px;
         
         color: $social-icons;
@@ -56,6 +60,12 @@ width: calc(100% / 3 - 30px);
       &:hover,
       &:focus {
       color: $akcent-color;
+      }
+      @media (max-width: 768px) {
+          max-width: 226px;
+      }
+      @media (max-width: 1200px) {
+          max-width: 170px;
       }
     }
     
