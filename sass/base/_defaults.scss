@@ -4,14 +4,28 @@ body {
     letter-spacing: 0.03em;
 }
 
-ul {
-    list-style: none;
-  }
   
-  a {
-    text-decoration: none;
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid crimson; 
+  
+    @media (min-width: 480px) {
+      width: 480px;
+    }
+  
+    @media (min-width: 768px) {
+      width: 768px;
+    }
+   
+    @media (min-width: 1200px) {
+    width: 1200px;
+    
   }
-
+    }
+  
   .visually-hidden { 
     position: absolute;
     width: 1px; 
@@ -25,31 +39,16 @@ ul {
 
   /* анульовання */
     
+  ul {
+    list-style: none;
+  }
   
+  a {
+    text-decoration: none;
+  }
 
 img {
     display: block;
     max-width: 100%;
     height: auto;
 }
-
-.container {
-  max-width: 480px;
-  min-width: 320px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (min-width: 768px) {
-    max-width: 768px;
-    
-  }
- 
-
-  
-  @media (min-width: 1200px) {
-  max-width: 1200px;
-  
-}
-  }
