@@ -2,23 +2,185 @@
     border-bottom: 1px solid rgba(236, 236, 236, 1);
    
     &__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
     }
+}
+.header__nav {
+    @media (min-width: 768px) {
+    display: flex;
+}
+}
+.nav {
+    @media (min-width: 768px) {
+    display: flex;
+}
 }
 
 .nav__site {
     display: none;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    align-items: center;
+    
+    margin-left: 88px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+@media (min-width: 1200px) {
+        margin-left: 93px;
+        
+    }
 }
 
+.nav__item {
+    &:not(:last-child) {
+        margin-right: 50px;
+
+    }
+}
+.nav__site .nav__item +.nav__item {
+}
+
+.nav__link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
+    
+    color: $title-text-color;
+    font-weight: 500; 
+    font-size: 14px; 
+    line-height: 1.14; 
+    letter-spacing: 0.02em;
+    @include transition(color);
+    
+}
+
+.nav__link:hover,
+.nav__link:focus {
+    color: $akcent-color;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    
+    background-color: $akcent-color;
+    border-radius: 2px;
+    opacity: 0;
+    
+    @include transition(opacity);
+}
+
+
+.nav__link:hover::after,
+.nav__link:focus::after {
+    opacity: 1;
+}
+
+.nav__link--carent {
+    color: $akcent-color;
+}
+
+.nav__link--carent::after {
+    opacity: 1;
+}
+
+.contacts__item {
+    @media (min-width: 768px) {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
+@media (min-width: 1200px) {
+.contacts .contacts__item + .contacts__item {
+    margin-left: 50px;
+}
+}
+
+/* .contacts */
 .contacts { 
     display: none;
+    @media (min-width: 768px) {
+        display: block;
+        margin-left: auto;
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        
+        
+        font-weight: 500; 
+        font-size: 14px; 
+        line-height: 1.14; 
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        @media (min-width: 1200px) {
+            display: flex;
+        
+        }
+    }
+
+    color: $primary-text-color;
 }
 
+.contacts__link {
+position: relative;
+
+   
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.02em;
+color: var(--primary-text-color);
+@include transition(color);
+
+@media (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    
+    padding-top: 22px;
+    padding-bottom: 22px;
+    
+}
+}
+
+.contacts__link:hover, 
+.contacts__link:focus {color: $akcent-color;}
+
+.contacts__link:hover::after,
+.contacts__link:focus::after {
+    opacity: 1;
+} 
+
+.contacts__icon {
+    align-items: center;
+    fill: currentColor;
+    margin-right: 10px;
+    @include transition(color);
+}
+.contacts__icon:hover,
+.contacts__icon:focus {
+fill: $akcent-color;
+}
 .header__menu {
-    border: transparent;
-    background-color: $hero-100pr;
+    @media (max-width: 767px) {
+        border: transparent;
+        background-color: $hero-100pr;
+         }
+         @media (min-width: 768px) {
+             display: none;
+         }
 }
 
 .header__menu--icon {

@@ -6,7 +6,7 @@
     padding-bottom: 118px;
     margin-top: 0px;
     margin-bottom: 0px;
-    // height: 600px;
+    height: 400px;
     text-align: center;
     background-image: linear-gradient(to right,
     $bg-hero-color, $bg-hero-color
@@ -15,19 +15,27 @@ url(../images/hero.jpg);
 background-size: cover;
 background-position: center;
 text-align: center; 
+@media (min-width: 1200px) {
+    height: 600px;
+}
 }
 
 .hero__title {
-    margin-top: 0;
-    margin-right:auto;
-    margin-bottom: 30px;
-    margin-left: auto;
+    margin: 0 auto 30px auto;
+    
     color: $hero-100pr; 
     font-weight: 900; 
      font-size: 26px; 
-    line-height: 1.42; 
+    line-height: 1.62; 
     min-width: 360px;
     letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    @media (min-width: 1200px) {
+        font-size: 44px; 
+        line-height: 1.36; 
+    
+    }
 }
 
 .hero__button {

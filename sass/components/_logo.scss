@@ -11,6 +11,11 @@
 }
 
 .logo--top {
+    @media (min-width: 768px) {
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    }
     @media (min-width: 1200px) {
         padding-top: 24px;
         padding-bottom: 25px;
