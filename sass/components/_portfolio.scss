@@ -1,17 +1,36 @@
 .btn {
     display: flex;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+    &__container {
+        padding-top: 60px;
+        padding-bottom: 40px;
+
+    @media (min-width: 1200px) {
+     padding-bottom: 14px;
+
+ }
+    @media (min-width: 1200px) {
     justify-content: center;
 
     padding-top: 93px;
     padding-bottom: 34px;
-padding-left: 0;
-margin-top: 0;
-margin-bottom: 0;
-}
 
-.btn .btn__item + .btn__item {
-    margin-left: 8px;
 }
+}
+}
+.btn__item {
+    @media (min-width: 480px) {
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+}
+// .btn .btn__item + .btn__item {
+//     margin-left: 8px;
+// }
 .btn__title {
     display: inline-block;
     border-radius: 4px;
@@ -42,7 +61,7 @@ margin-bottom: 0;
 
 
 /* container */
-.title-flex {
+.container__card{
     margin-right: auto;
    margin-left: auto;
     padding-right: 15px;

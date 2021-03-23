@@ -936,7 +936,7 @@ img {
   background: #2F303A;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -952,9 +952,15 @@ img {
   padding-bottom: 60px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   .footer__container {
     text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .footer__container {
+    padding-top: 0;
   }
 }
 
@@ -969,9 +975,21 @@ img {
   }
 }
 
+@media (min-width: 768px) {
+  .footer__information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
 .address {
   padding-left: 0;
-  margin: 20px auto;
   max-width: 232px;
   font-style: normal;
   font-weight: normal;
@@ -981,13 +999,13 @@ img {
 
 @media (max-width: 767px) {
   .address {
-    text-align: center;
+    margin: 20px auto;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .address {
-    display: block;
+    margin-bottom: 0;
   }
 }
 
@@ -1027,7 +1045,7 @@ img {
   text-transform: uppercase;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   .footer-social__title {
     margin-top: 60px;
   }
@@ -1064,12 +1082,12 @@ img {
 }
 
 /* footer e-mail */
-.footer-form {
+.footer-form__subscribe {
   display: block;
 }
 
 @media (min-width: 1200px) {
-  .footer-form {
+  .footer-form__subscribe {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1185,18 +1203,36 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 93px;
-  padding-bottom: 34px;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.btn .btn__item + .btn__item {
-  margin-left: 8px;
+.btn__container {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 1200px) {
+  .btn__container {
+    padding-bottom: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 93px;
+    padding-bottom: 34px;
+  }
+}
+
+@media (min-width: 480px) {
+  .btn__item:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .btn__title {
@@ -1225,7 +1261,7 @@ img {
 }
 
 /* container */
-.title-flex {
+.container__card {
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
