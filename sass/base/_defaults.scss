@@ -10,10 +10,9 @@ body {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    border: 1px solid crimson; 
   
-    @media (min-width: 480px) {
-      width: 480px;
+    @media (min-width: 480px)  {
+    width: 480px;
     }
   
     @media (min-width: 768px) {

@@ -49,7 +49,7 @@
     color: $title-text-color;
     @include transition(color);
 
-&:focus,
+ &:focus,
  &:hover {
      color: $akcent-color;
  }
