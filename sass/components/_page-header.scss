@@ -174,10 +174,11 @@ color: var(--primary-text-color);
 fill: $akcent-color;
 }
 .header__menu {
-    @media (max-width: 767px) {
-        border: transparent;
+        border: none;
         background-color: $hero-100pr;
-         }
+        cursor: pointer;
+        outline: none;
+         
          @media (min-width: 768px) {
              display: none;
          }

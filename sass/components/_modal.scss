@@ -47,11 +47,13 @@
     padding: 5px;
     
     display: flex;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  cursor: pointer;
   background-color: inherit;
-  
+  @include transition(fill);
+
   &:focus, 
   &:hover {
      fill: $akcent-color;
