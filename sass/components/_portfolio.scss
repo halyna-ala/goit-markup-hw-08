@@ -80,10 +80,126 @@
 
 
 /* container */
+.card {
+    padding-left: 0;
+    margin-bottom: 0;
 
-    .card__grid {
-    background-color: $hero-100pr;
-outline: 1px solid crimson;
-    
+    @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: space-between;
+        // margin-top: calc(-1 * 30px);
+        // margin-left: calc(-1 * 30px);
 
     }
+    &__container {
+        @media (max-width: 767px) {
+            padding-bottom: 60px;
+        }
+        @media (min-width: 768px) {
+            padding-bottom: 94px;
+        }
+        
+       
+    }
+}
+.card__grid {
+    background-color: $hero-100pr;
+    border: 1px solid #EEEEEE;
+    
+    transition: box-shadow $animation,
+    border-radius $animation;
+
+    @media (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    @media (min-width: 768px) {
+        flex-basis: calc((100% - 60px) / 2);
+        // margin-top: 30px;
+        // margin-left: 30px;
+    }
+    @media (min-width: 1200px) {
+        // flex-basis: calc(100% / 3 - 30px);
+    }
+    
+    &:hover {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+}
+.card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-contents {
+    padding: 20px 24px;
+    flex-grow: 1;
+}
+
+.card-contents__title {
+    margin-top: 0;
+    margin-bottom: 4px;
+    width: 322px;
+
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+.card-contents__text {
+    margin-top: 4;
+    margin-bottom: 0;
+}
+
+/* overlay-portfolio */
+.card__thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.card__overlay {
+    position: absolute;
+   
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;  
+background-color: $card-bg-color;
+
+transform: translateY(100%);
+@include transition(transform);
+
+}
+
+.card__set:hover .card__overlay {
+    transform: translateX(0); 
+}
+.card__text {
+    position: absolute;
+    width: 322px;
+    height: 168px;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+
+font-weight: 400;
+font-size: 18px;
+line-height: 1.56;
+
+color: $hero-100pr;
+
+opacity: 0;
+@include transition(opacity);
+}
+
+.card__set:hover .card__text,
+.card__set:focus .card__text {
+    opacity: 1;
+}
