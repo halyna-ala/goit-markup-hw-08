@@ -26,11 +26,18 @@
 .footer__information {
     @media (min-width: 768px) {
         display: flex;
-        justify-content:space-around ;
+        justify-content: space-between;
     align-items: baseline;
-
     }
 }
+// .footer__nav {
+//     @media (min-width: 768px) {
+//         margin-right: 195px;
+//     }
+//     @media (max-width: 1199px) {
+//         margin-right: 0;
+//     }
+// }
 .address {    
     padding-left: 0;
     max-width: 232px;

@@ -11,15 +11,26 @@
     background-image: linear-gradient(to right,
     $bg-hero-color, $bg-hero-color
 ),
-url(../images/hero.jpg);
+url(../images/hero/hero.jpg);
 background-size: cover;
 background-position: center;
 text-align: center; 
+
 @media (min-width: 1200px) {
     height: 600px;
 }
 }
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
+    .hero {
+    background-image: linear-gradient(to right,
+    $bg-hero-color, $bg-hero-color
+),
+url(../images/hero/hero@2x.jpg);
+}
+}
 
+      
 .hero__title {
     margin: 0 auto 30px auto;
     
@@ -30,6 +41,7 @@ text-align: center;
     min-width: 360px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+   
 
     @media (min-width: 1200px) {
         font-size: 44px; 
