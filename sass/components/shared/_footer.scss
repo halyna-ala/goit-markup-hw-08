@@ -1,43 +1,38 @@
 .footer {
     background: $backgraund;
 
-    @media (min-width: 768px) {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-.footer__container {
-    padding-top: 60px;
-    padding-bottom: 60px;
-
-    @media (max-width: 1200px) {
-        text-align: center;
-    }
-    @media (min-width: 768px) and (max-width: 1200px) {
-        padding-top: 0;
-    }
+    
+    .footer__container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        @media (max-width: 1199px) {
+            text-align: center;
+        }
+          
+        
     @media (min-width: 1200px) {
     display: flex;
     align-items: baseline;
-    
+    }
 }
 }
 .footer__information {
     @media (min-width: 768px) {
+        width: auto;
         display: flex;
-        justify-content: space-between;
-    align-items: baseline;
+        justify-content: center;
+       align-items: baseline; 
+}
+   
+}
+.footer__nav {
+    @media (min-width: 768px) {
+        margin-right: 195px;
+    }
+    @media (min-width: 1200px) {
+        margin-right: 0;
     }
 }
-// .footer__nav {
-//     @media (min-width: 768px) {
-//         margin-right: 195px;
-//     }
-//     @media (max-width: 1199px) {
-//         margin-right: 0;
-//     }
-// }
 .address {    
     padding-left: 0;
     max-width: 232px;
@@ -60,8 +55,6 @@
 }
  
 .address__item {
-    display: inline-block;
-    flex-wrap: wrap;
     margin-top: 9px;
     @include transition (color)
 
@@ -82,8 +75,6 @@
 
 
 .footer-social__title {
-    display: block;
-    font-style: normal;
   font-weight: 700;
   margin-bottom: 20px;
     padding-left: 0;
@@ -93,13 +84,10 @@
     color: $hero-100pr;
 text-transform: uppercase;
 
-@media (max-width: 1200px) {
-margin-top: 60px;
-}
 }
 
 .footer-social {
-    max-width: 206px;
+    width: 206px;
     height: 80px;
 
     @media (max-width: 767px) {
@@ -111,7 +99,7 @@ margin-top: 60px;
     @media (min-width: 1200px) {
         padding-top: 0;
         padding-bottom: 0;
-        display: flex;
+        // display: flex;
         justify-content: center;
         align-items: center;
   margin: 12px 93px 40px 70px;
@@ -173,7 +161,11 @@ margin-top: 60px;
 }
  
 // buttom
-
+ .footer-form {
+     @media (min-width:481px) and (max-width: 1199px) {
+         margin-top: 60px;
+     }
+ }
 .footer-form__button {
     width: 200px;
     height: 50px;
