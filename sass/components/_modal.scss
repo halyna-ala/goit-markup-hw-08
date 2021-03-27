@@ -155,22 +155,33 @@ overflow-y: auto;
     /* checkbox */
 
     .checkbox {
-       margin: 0 11px 30px 12px;
+        position: relative;
+        padding-left: 24px;
+        margin: 0 0 30px 0;
+
+        @media (min-width: 1199px) {
+            margin: 0 11px 30px 12px;
+        }
     }
 
     .checkbox__lable {
-    display: flex;
+    // display: flex;
 
     align-items: center;
     font-family: inherit;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.16;
     cursor: pointer;
-
+    
     &:focus .checkbox__link,
     &:hover .checkbox__link {
-color: $modal-bg-btn;
-}
+        color: $modal-bg-btn;
+    }
+    @media (min-width: 1199px) {
+        font-size: 14px;
+        line-height: 1.71;
+     
+ }
 }
 
  .checkbox__link {
@@ -188,6 +199,10 @@ color: $modal-bg-btn;
 }
 
 .chackbox__icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
     margin-right: 7px;
     border: 2px solid $logo-tekst;
     border-radius: 3px;
