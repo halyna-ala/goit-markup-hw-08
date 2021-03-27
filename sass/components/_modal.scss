@@ -32,14 +32,22 @@
     padding: 40px;
     transform: translate(-50%, -50%) scale(1);
 
-    min-width: 528px;
+    min-width: 100vw;
     max-height: 100vh;
+overflow-y: auto;
 
     background-color: $hero-100pr;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
   
+    @media (min-width: 450px) {
+        min-width: 450px;
+    }
+    @media (min-width: 1199px) {
+        min-width: 528px;
+    }
 }
+
 .modal__icon {
     position: absolute;
     top: 8px;
@@ -52,6 +60,7 @@
     cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: inherit;
+
   @include transition(fill);
 
   &:focus, 
@@ -65,9 +74,13 @@
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     color: $title-text-color;
+    
+    @media (min-width: 1199px) {
+        line-height: 1.15;
+    }
 }
 
 .signup-form__group {
@@ -89,11 +102,11 @@
 }
 
 .signup-form__input {
-    width: 100%;
     font-family: inherit;
     margin: 0;
     padding: 11px 11px 11px 42px;
-    width: 448px;
+    width: 100%z;
+    max-width: 448px;
     
     
     cursor: pointer; 
