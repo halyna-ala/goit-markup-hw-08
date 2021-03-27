@@ -1580,8 +1580,7 @@ img {
   font-family: inherit;
   margin: 0;
   padding: 11px 11px 11px 42px;
-  width: 100%z;
-  max-width: 448px;
+  width: 100%;
   cursor: pointer;
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);

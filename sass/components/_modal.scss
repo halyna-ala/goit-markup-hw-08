@@ -77,7 +77,7 @@ overflow-y: auto;
     line-height: 1.5;
     text-align: center;
     color: $title-text-color;
-    
+
     @media (min-width: 1199px) {
         line-height: 1.15;
     }
@@ -105,8 +105,8 @@ overflow-y: auto;
     font-family: inherit;
     margin: 0;
     padding: 11px 11px 11px 42px;
-    width: 100%z;
-    max-width: 448px;
+    width: 100%;
+    // max-width: 448px;
     
     
     cursor: pointer; 
