@@ -150,9 +150,10 @@ text-transform: uppercase;
         border-color: $modal-bg-btn;
     }
         @media (max-width: 1199px) {
-            margin-right: auto;
-            margin-left: auto;
-            width: 450px;   
+            // margin-right: auto;
+            // margin-left: auto;
+          width: 100%;  
+           max-width: 450px;
         }
         @media (min-width: 1200px) {
             width: 358px;
