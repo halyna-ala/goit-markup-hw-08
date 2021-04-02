@@ -449,8 +449,8 @@ img {
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/hero/header-480.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/header-480.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/header-480.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/header-480.jpg");
   background-size: contain;
   background-position: center;
   text-align: center;
@@ -1844,5 +1844,20 @@ img {
 
 .menu-social__item__link {
   text-decoration: none;
+}
+
+.problems__list {
+  counter-reset: section;
+  list-style-type: none;
+}
+
+.problems__text::before {
+  counter-increment: section;
+  content: "— " counter(section, decimal-leading-zero) " ";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ff6b09;
+  margin-bottom: 5px;
 }
 /*# sourceMappingURL=main.css.map */
