@@ -11,6 +11,38 @@ body {
     padding-left: 15px;
     padding-right: 15px;
   
+    .problems {
+    
+    }
+    .problems-container {
+    padding-right: 20px;
+    padding-left: 20px;
+    }
+    
+    .problems__title {
+        background-color: rgba(17, 21, 24, 1);
+        color: #fff;
+     @media (min-width: 320px) {
+         height: 520px;
+         padding-top: 370px;
+            padding-bottom: 47px;
+     }
+     @media (min-width: 768px) {
+        height: 340px;
+     }
+    &--color {
+        color: rgba(255, 107, 9, 1);
+    }}
+    
+    .problems__list {
+        counter-reset: section; 
+        list-style-type: none;
+    }
+    .problems__text::before {
+        counter-increment: section;
+        content: '— ' counter(section, decimal-leading-zero) ' ';
+      
+    }
     @media (min-width: 480px)  {
     max-width: 480px;
     }
