@@ -41,11 +41,15 @@ margin-bottom: 368px;
     position: absolute;
     top: 488px;
     left: 50px;
+
     padding: 20px 14px;
     margin-top: 27px;
+
     counter-reset: section; 
     list-style-type: none;
-    background: #FFFFFF;
+
+    background-color: #FFFFFF;
+
 box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 
  @media (min-width: 768px) {
