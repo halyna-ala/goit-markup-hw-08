@@ -1902,11 +1902,30 @@ img {
   color: #fff;
 }
 
-@media (min-width: 320px) {
+.problems__title--color {
+  color: #ff6b09;
+}
+
+@media (min-width: 1280px) {
+  .problems__title::before {
+    content: " ";
+    position: absolute;
+    width: 455px;
+    height: 472px;
+    bottom: 30%;
+    right: -50px;
+    background-image: url(../../../images/clock.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .problems__title {
     height: 545px;
     padding: 50px 20px 367px 20px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
 }
 
@@ -1919,21 +1938,17 @@ img {
     height: 340px;
     padding: 60px 160px 170px 40px;
     padding-bottom: 177px;
-    margin-bottom: 160px;
+    margin-bottom: 250px;
   }
 }
 
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .problems__title {
     font-size: 46px;
     line-height: 1.3;
     height: 560px;
     padding: 100px auto 280px 183px;
   }
-}
-
-.problems__title--color {
-  color: #ff6b09;
 }
 
 .problems__list {
@@ -1962,7 +1977,7 @@ img {
     top: 250px;
     right: 44px;
     left: 44px;
-    height: 300px;
+    height: 310px;
     padding: 0 96px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1973,10 +1988,11 @@ img {
   }
 }
 
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .problems__list {
     top: 450px;
     right: 183px;
+    left: 183px;
     height: 362px;
     padding: 70px 110px;
   }
@@ -1994,22 +2010,6 @@ img {
   color: black;
 }
 
-@media (min-width: 768px) {
-  .problems__text {
-    -ms-flex-preferred-size: calc((100% - 44px) / 2);
-        flex-basis: calc((100% - 44px) / 2);
-    margin-top: 22px;
-    margin-left: 22px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .problems__text {
-    -ms-flex-preferred-size: calc((100% - 66px) / 3);
-        flex-basis: calc((100% - 66px) / 3);
-  }
-}
-
 .problems__text:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -2025,6 +2025,23 @@ img {
   display: -ms-flexbox;
   display: flex;
   color: #ff6b09;
+}
+
+@media screen and (min-width: 768px) {
+  .problems__text {
+    -ms-flex-preferred-size: calc((100% - 44px) / 2);
+        flex-basis: calc((100% - 44px) / 2);
+    margin-top: 22px;
+    margin-left: 22px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .problems__text {
+    -ms-flex-preferred-size: calc((100% - 66px) / 3);
+        flex-basis: calc((100% - 66px) / 3);
+  }
 }
 
 .benefits__title {
